@@ -1,7 +1,5 @@
 package ru.geekbrains.lesson7;
 
-import ru.geekbrains.lesson5.Person;
-
 public class MainClass {
     public static void main(String[] args) {
         //Cat cat = new Cat("Barsik", 65);
