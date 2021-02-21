@@ -32,6 +32,7 @@ public class Robot implements Run, Jump, Player {
 
     }
 
+
     @Override
     public boolean jump(Hurdles hurdles) {
         final String nameHurglesClass = "Wall";

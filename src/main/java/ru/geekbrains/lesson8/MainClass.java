@@ -7,12 +7,12 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        Player man = new Man("Kost`ya", 50, 1);
-        Player man2 = new Man("Dmitriy", 1000,4);
-        Player cat = new Cat( "Murzik", 50 , 3 );
-        Player cat2 = new Cat("Pushok", 70, 10 );
-        Player robot = new Robot("RD1", 700, 10 );
-        Player robot2 = new Robot("RD2", 700, 10 );
+        Player man = new Man("Kost`ya", 500, 4);
+        Player man2 = new Man("Dmitriy", 1000,3);
+        Player cat = new Cat( "Murzik", 150 , 1 );
+        Player cat2 = new Cat("Pushok", 170, 2 );
+        Player robot = new Robot("RD1", 700, 1 );
+        Player robot2 = new Robot("RD2", 700, 4 );
 
         ArrayList<Player> players = new ArrayList<>();
         players.add(man);
@@ -22,54 +22,33 @@ public class MainClass {
         players.add(robot);
         players.add(robot2);
 
-        // Player [] players = {man,man2,cat,cat2};
 
         Hurdles treadmill = new Treadmill("Дорожка1",70);
-        Hurdles wall = new Wall("Стена1", 2);
-        Hurdles treadmill2 = new Treadmill("Дорожка2",100);
-        Hurdles wall2 = new Wall("Стена2", 1);
+        Hurdles wall = new Wall("Стена1", 3);
+        Hurdles treadmill2 = new Treadmill("Дорожка2",160);
+        Hurdles wall2 = new Wall("Стена2", 2);
 
         Hurdles [] hurdles = {treadmill ,  treadmill2, wall, wall2};
-        //Object [] players = { cat, cat2};
+
         System.out.println("=================================================");
 
         for (int i = 0; i < hurdles.length; i++) {
             for (int j = 0; j < players.size(); j++) {
-               // players[j].jump(hurdles[i]);
-                //players[j].run(hurdles[i]);
 
                 if (!players.get(j).jump(hurdles[i]) | !players.get(j).run(hurdles[i])) {
+                    System.out.println("       !!!удалаем участника !!!  " + players.get(j).getName());
 
                    players.remove(j);
+                   j--;
 
                 }
            }
-
-
         }
-
-            
-
-
-
-        
-        //cat2.run(wall); cat2.run(treadmill); cat2.jump(wall); cat2.jump(treadmill);
-        //cat.run(wall); cat.run(treadmill); cat.jump(wall); cat.jump(treadmill);
-
-
-
-
-
-
-//        cat.jump(wall.getWallHeight());
-//        cat.run(treadmill.getTreadmillLong());
-//        man.jump(wall.getWallHeight());
-//        man.run(treadmill.getTreadmillLong());
-//        robot.jump(wall.getWallHeight());
-//        robot.run(treadmill.getTreadmillLong());
-
-
-
+        System.out.println();
+        System.out.println("Все препятствия преодолели " + players.size() + " участника(ов):");
+        for (int i = 0; i < players.size(); i++) {
+            System.out.println(players.get(i).getName());
+        }
 
     }
 }
