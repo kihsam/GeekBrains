@@ -25,7 +25,7 @@ public class Man implements Run, Jump, Player {
                 return false;
             }
         } else {
-            // System.out.println(name + " еще не умет бегать по " + hurdles.getNameHurdles());
+            // System.out.println(name + " навык бега не расчитан на " + hurdles.getNameHurdles());
             return true;
         }
 
@@ -45,7 +45,7 @@ public class Man implements Run, Jump, Player {
                 return false;
             }
         } else {
-            // System.out.println(name + " еще не умет бегать по " + hurdles.getNameHurdles());
+            // System.out.println(name + " навык прыжков не расчитан на  " + hurdles.getNameHurdles());
             return true;
         }
     }

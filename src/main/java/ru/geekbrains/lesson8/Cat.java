@@ -21,7 +21,7 @@ public class Cat implements Run,Jump, Player{ private String name; private int t
                 return false;
             }
         } else {
-            // System.out.println(name + " еще не умет бегать по " + hurdles.getNameHurdles());
+            // System.out.println(name + " навык бега не расчитан на " + hurdles.getNameHurdles());
             return true;
         }
 
@@ -43,7 +43,7 @@ public class Cat implements Run,Jump, Player{ private String name; private int t
                 return false;
             }
         } else {
-            // System.out.println(name + " еще не умет бегать по " + hurdles.getNameHurdles());
+            // System.out.println(name + "  навык прыжков не расчитан на  " + hurdles.getNameHurdles());
             return true;
         }
     }
