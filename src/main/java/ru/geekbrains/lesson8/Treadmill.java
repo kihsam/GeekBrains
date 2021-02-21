@@ -1,15 +1,24 @@
 package ru.geekbrains.lesson8;
 
-public class Treadmill { private int treadmillLength;
-    public Treadmill(int treadmillLength){
+public class Treadmill implements Hurdles {String name;  private int treadmillLength;
+    public Treadmill( String name, int treadmillLength){
+        this.name = name;
         this.treadmillLength = treadmillLength;
     }
-
-    public int getTreadmillLong() {
+    @Override
+    public int getParam() {
         return treadmillLength;
     }
-
-    public void setTreadmillLong(int treadmillLength) {
+    @Override
+    public void setParam(int treadmillLength) {
         this.treadmillLength = treadmillLength;
+    }
+    @Override
+    public String getNameHurdles() {
+        return name;
+    }
+    @Override
+    public void setNameHurdles(String name) {
+        this.name = name;
     }
 }
