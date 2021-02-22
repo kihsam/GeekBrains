@@ -47,6 +47,7 @@ public class MainClass {
         System.out.println();
         System.out.println("Все препятствия преодолели " + players.size() + " участника(ов):");
         for (int i = 0; i < players.size(); i++) {
+
             System.out.println(players.get(i).getName());
         }
 
