@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MainClass {
     public static void main(String[] args) throws MyArraySizeException,MyArrayDataException {
         String[][] arrString = {{"1", "1", "7", "3"},
-                {"1", "2", "4", "4"},
+                {"1", "2", "t", "4"},
                 {"5", "6", "7", "4"},
                 {"3", "3", "4", "4"}};
 
@@ -30,7 +30,8 @@ public class MainClass {
                         summ += Integer.parseInt(array[i][j]);
 
                     } catch (Exception e) {
-                        throw new MyArrayDataException("!!! Ошибка !!! \n неверные данные находятся в координате массива: строка = " + i + ", столбец " + j);
+                        //throw new MyArrayDataException("!!! Ошибка !!! \n неверные данные находятся в координате массива: строка = " + i + ", столбец " + j);
+                        System.out.println("!!! Ошибка !!! \n неверные данные находятся в координате массива: строка = " + i + ", столбец " + j);
                     }
 
                 }
