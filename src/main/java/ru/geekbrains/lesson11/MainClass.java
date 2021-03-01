@@ -19,13 +19,13 @@ public class MainClass {
         Box<Apple> appleBox1 = new Box<>();
 
         System.out.println(appleBox.getWeight());
-      //  System.out.println(orangeBox.getWeight());
-      //  System.out.println(appleBox.compare(orangeBox));
-        appleBox1.transferToOtherBox(appleBox1);
-       // System.out.println(appleBox.getWeight());
-       // System.out.println(appleBox1.getWeight());
-       // appleBox.addFruit(new  Apple ( ) );
-      //  System.out.println(appleBox.getWeight());
+        System.out.println(orangeBox.getWeight());
+        System.out.println(appleBox.compare(orangeBox));
+        appleBox.transferToOtherBox(appleBox1);
+        System.out.println(appleBox.getWeight());
+        System.out.println(appleBox1.getWeight());
+        appleBox.addFruit(new  Apple ( ) );
+        System.out.println(appleBox.getWeight());
 
 
 

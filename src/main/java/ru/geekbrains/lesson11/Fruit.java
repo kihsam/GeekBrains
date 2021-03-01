@@ -7,6 +7,6 @@ public class Fruit {
         this.weight = weight;
     }
     public float getWeight(){
-        return getWeight();
+        return weight;
     }
 }

@@ -1,5 +1,6 @@
 package ru.geekbrains.lesson11;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class Box <T extends Fruit & RealFruit>{
     private final List<T> fruitBox;
 
     public Box (T ...fruits){
-        this.fruitBox = Arrays.asList(fruits);
+        this.fruitBox = new ArrayList<>(Arrays.asList(fruits));
     }
 
     public float getWeight(){
